@@ -1,6 +1,5 @@
 
-// const MAX_POINTS: i32 = 100_000;
-
+// const MAX_POINTS: f32 = 100.43;
 
 fn main() {
     prueba_inmutabilidad();
@@ -9,6 +8,11 @@ fn main() {
 
 fn prueba_inmutabilidad() {
     let mut x = 5;
-    x = x*2;
-    println!("Hello, world! Value of x is: {}", x);
- }
+    let tupla = ("hola", 2, 2.2, true);
+    let a = tupla.2;
+    x = x * 2;
+    let arr=[1,2,3,4];
+
+    
+
+}
