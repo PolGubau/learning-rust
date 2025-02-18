@@ -2,17 +2,20 @@
 // const MAX_POINTS: f32 = 100.43;
 
 fn main() {
-    prueba_inmutabilidad();
+    let result = calcular_factorial(25);
+    println!("Resultado es {}",result)
 }
 
 
-fn prueba_inmutabilidad() {
-    let mut x = 5;
-    let tupla = ("hola", 2, 2.2, true);
-    let a = tupla.2;
-    x = x * 2;
-    let arr=[1,2,3,4];
+fn calcular_factorial(number:u128)->u128{
 
-    
-
+    if number == 0 || number ==1{
+        1
+    } else{
+        let mut result = number;
+        for i in (0..result).rev(){
+            result = result*i;
+        }
+        result
+    }
 }
