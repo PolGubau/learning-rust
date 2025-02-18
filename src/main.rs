@@ -13,7 +13,7 @@ fn calcular_factorial(number:u128)->u128{
         1
     } else{
         let mut result = number;
-        for i in (0..result).rev(){
+        for i in (1..result).rev(){
             result = result*i;
         }
         result
