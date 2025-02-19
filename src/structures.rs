@@ -9,6 +9,16 @@ struct FriendOfMine {
 
 struct RGBColor(u8, u8, u8);
 
+// 'a is a lifetime parameter, this means that the lifetime of the reference must be at least as long as the struct that contains it.
+// This is a way to prevent dangling references.
+
+struct User<'a> {
+    name: &'a str,
+    email: &'a str,
+    sing_in_count: u64,
+    active: bool,
+}
+
 fn new_friend(name: String, age: u8) -> FriendOfMine {
     FriendOfMine {
         name,
